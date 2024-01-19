@@ -20,7 +20,7 @@ import { CreateProjectComponent } from './project/create-project/create-project.
 const routes: Routes = [
 
   {path:'', component:HomeComponent, title:'Home'},
-  
+  {path:'home', component:HomeComponent, title:'Home'},
   {path:'about', component:AboutComponent, title:'About'},
   {path:'contact', component:ContactComponent, title:'ContactUs'},
   {path:'login', component:LoginComponent, title:'Login'},
