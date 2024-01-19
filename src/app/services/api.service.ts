@@ -17,7 +17,7 @@ export class ApiService {
 
   // Method to post user data to the server
   postUser(data: any): Observable<any> {
-    return this.http.post<any>('http://localhost:3000/users', data);
+    return this.http.post<any>('https://erpp-api.onrender.com/users', data);
 
   }
 
@@ -28,66 +28,66 @@ export class ApiService {
 
   // Method to update user data on the server
   updateUser(id: any, data: any): Observable<any> {
-    return this.http.put<any>('http://localhost:3000/users/' + id, data);
+    return this.http.put<any>('https://erpp-api.onrender.com/users/' + id, data);
   }
 
   // Method to delete user data on the server
   deleteUser(id: any): Observable<any> {
-    return this.http.delete<any>('http://localhost:3000/users/' + id);
+    return this.http.delete<any>('https://erpp-api.onrender.com/users/' + id);
   }
 
   // Method to get a specific user's data by ID from the server
   getUserById(id: any): Observable<any> {
-    return this.http.get<any>('http://localhost:3000/users/' + id);
+    return this.http.get<any>('https://erpp-api.onrender.com/users/' + id);
   }
 
   // Admin-related methods
 
   // Method to post admin data to the server
   postAdmin(data: any): Observable<any> {
-    return this.http.post<any>('http://localhost:3000/admin', data);
+    return this.http.post<any>('https://erpp-api.onrender.com/admin', data);
   }
 
   // Method to get admin data from the server
   getAdmin(): Observable<any> {
-    return this.http.get<any>('http://localhost:3000/admin');
+    return this.http.get<any>('https://erpp-api.onrender.com/admin');
   }
 
   // Method to update admin data on the server
   updateAdmin(id: number, data: any): Observable<any> {
-    return this.http.put<any>('http://localhost:3000/admin/' + id, data);
+    return this.http.put<any>('https://erpp-api.onrender.com/admin/' + id, data);
   }
 
   // Method to delete admin data on the server
   deleteAdmin(id: number): Observable<any> {
-    return this.http.delete<any>('http://localhost:3000/admin/' + id);
+    return this.http.delete<any>('https://erpp-api.onrender.com/admin/' + id);
   }
 
   // Manager-related methods
 
   // Method to post manager data to the server
   postManager(data: any): Observable<any> {
-    return this.http.post<any>('http://localhost:3000/managers', data);
+    return this.http.post<any>('https://erpp-api.onrender.com/managers', data);
   }
 
   // Method to get manager data from the server
   getManager(): Observable<any> {
-    return this.http.get<any>('http://localhost:3000/managers');
+    return this.http.get<any>('https://erpp-api.onrender.com/managers');
   }
 
   // Method to get a specific manager's data by ID from the server
   getManagerById(id: any): Observable<any> {
-    return this.http.get<any>('http://localhost:3000/managers/' + id);
+    return this.http.get<any>('https://erpp-api.onrender.com/managers/' + id);
   }
 
   // Method to update manager data on the server
   updateManager(id: number, data: any): Observable<any> {
-    return this.http.put<any>('http://localhost:3000/managers/' + id, data);
+    return this.http.put<any>('https://erpp-api.onrender.com/managers/' + id, data);
   }
 
   // Method to delete manager data on the server
   deleteManager(id: number): Observable<any> {
-    return this.http.delete<any>('http://localhost:3000/managers/' + id);
+    return this.http.delete<any>('https://erpp-api.onrender.com/managers/' + id);
   }
 
   // Authentication-related methods

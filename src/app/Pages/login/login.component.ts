@@ -37,7 +37,7 @@ export class LoginComponent implements OnInit {
    */
   login() {
     // Send an HTTP GET request to the server to fetch user data
-    this.http.get<any>('http://localhost:3000/employers')
+    this.http.get<any>('https://erpp-api.onrender.com/employers')
       .subscribe(res => {
 
           console.log('res', res);
