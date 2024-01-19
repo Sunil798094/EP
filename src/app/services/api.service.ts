@@ -23,7 +23,7 @@ export class ApiService {
 
   // Method to get user data from the server
   getUser(): Observable<any> {
-    return this.http.get<any>('http://localhost:3000/users');
+    return this.http.get<any>('https://erpp-api.onrender.com/users');
   }
 
   // Method to update user data on the server
