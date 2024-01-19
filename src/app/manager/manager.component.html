@@ -1,0 +1,35 @@
+<body>
+  <div class="div">
+    <h1 class="text-center">Manager Registration</h1>
+
+    <form [formGroup]="managerForm" (ngSubmit)="loadManager()">
+      <!-- <div *ngIf="alert"  class="alert alert-success" role="alert">
+       Successfully Registered!
+      </div> -->
+      <div class="mb-3">
+        <label for="exampleInputEmail1" class="form-label">Employee ID</label>
+        <input type="text" class="form-control" formControlName="id" aria-describedby="emailHelp" required>
+        <div id="emailHelp" class="form-text"></div>
+      </div>
+      <div class="mb-3">
+        <label for="exampleInputPassword1" class="form-label">Name</label>
+        <input type="text" class="form-control" id="exampleInputPassword1" formControlName="name" required>
+      </div>
+      <div class="mb-3">
+        <label for="exampleInputPassword1" class="form-label">Email</label>
+        <input type="email" class="form-control" id="exampleInputPassword1" formControlName="email" required email>
+      </div>
+      <div class="mb-3">
+        <label for="exampleInputPassword1" class="form-label">Department</label>
+        <input type="text" class="form-control" id="exampleInputPassword1" formControlName="department" required>
+      </div>
+      <div class="mb-3">
+        <label for="exampleInputPassword1" class="form-label">Password</label>
+        <input type="password" class="form-control" id="exampleInputPassword1" formControlName="password" required>
+      </div>
+
+
+      <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+  </div>
+</body>

@@ -1,0 +1,152 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-image: url('https://img.freepik.com/premium-vector/geometric-gradient-technology-background_23-2149110132.jpg?size=626&ext=jpg&ga=GA1.1.632798143.1705449600&semt=ais');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+  body {
+    margin: 0;
+    padding: 0;
+    background-color: #f8f9fa; /* Set a light background color for the body */
+  }
+  
+  .box {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .container {
+    background-color: #fff; /* White background for the container */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    padding: 20px;
+    width: 100%;
+    max-width: 400px; /* Set a maximum width for the container */
+  }
+  
+  h2 {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .form-group {
+    margin-bottom: 20px;
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+  }
+  
+  input {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ced4da; /* Light border color */
+    border-radius: 4px;
+    margin-bottom: 10px;
+  }
+  
+  .btn-primary {
+    background-color: #007bff; /* Primary button color */
+    color: #fff; /* Text color */
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease; /* Smooth transition on hover */
+  }
+  
+  .btn-primary:hover {
+    background-color: #0056b3; /* Darker color on hover */
+  }
+  
+  a {
+    display: block;
+    text-align: center;
+    margin-top: 10px;
+    color: #000; /* Link color */
+  }
+  
+  a:hover {
+    text-decoration: underline;
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* .box {
+    margin-top: 50px;
+}
+
+.container {
+    background-color: #f8f9fa;
+    padding: 10px; 
+    border-radius: 10px; 
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
+}
+
+h2 {
+    text-align: center;
+    color: #007bff; 
+}
+
+.form-group {
+    margin-bottom: 0px; 
+}
+
+label {
+    font-weight: bold; 
+}
+
+.form-control {
+    border-radius: 5px;
+}
+
+.text-danger {
+    color: #dc3545;
+}
+
+.btn-primary {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+}
+
+a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #0056b3;
+} */
+
+
+  

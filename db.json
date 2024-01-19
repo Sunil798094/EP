@@ -1,0 +1,181 @@
+{
+  "employers": [
+    {
+      "id": "122",
+      "user_type": "Manager",
+      "fullname": "Suni",
+      "department": "Management",
+      "email": "suni@testmail.com",
+      "password": "Suni@1234"
+    },
+    {
+      "id": "1234",
+      "user_type": "Manager",
+      "fullname": "Ashit Palai",
+      "department": "Management",
+      "email": "ashit@gmail.com",
+      "password": "Ashit@12"
+    },
+    {
+      "id": "101",
+      "user_type": "Admin",
+      "fullnames": "Jonga",
+      "department": "IT Admin",
+      "email": "abhijeet@gmail.com",
+      "password": "Abhijeet@1206"
+    },
+    {
+      "id": "121",
+      "user_type": "Manager",
+      "fullname": "Sunil",
+      "department": "Angular",
+      "email": "sunil@test.com",
+      "password": "Sunil@123"
+    }
+  ],
+  "users": [
+    {
+      "name": "Apple byte",
+      "id": "Iphone123",
+      "email": "apple@gmail.com",
+      "password": "apple@023",
+      "department": "developer"
+    },
+    {
+      "name": "sunil Chouhan",
+      "id": "SunilRR",
+      "email": "RRR2023@gmail.com",
+      "password": "Sunil@1206",
+      "department": "Digital"
+    },
+    {
+      "id": "Mac123",
+      "name": "Macrosoft",
+      "email": "Mac123@gmail.com",
+      "password": "Mac123",
+      "department": "Analyst"
+    },
+    {
+      "id": "Eti12",
+      "name": "Eti",
+      "email": "eti@gmail.com",
+      "password": "Eti@12345",
+      "department": "HR"
+    }
+  ],
+  "managers": [
+    {
+      "id": "1234",
+      "name": "John Doe",
+      "email": "john.doe@example.com",
+      "password": "John@123",
+      "department": "HR"
+    },
+    {
+      "id": "5678",
+      "name": "Alice Johnson",
+      "password": "Alice@567",
+      "email": "alice.j@example.com",
+      "department": "Marketing"
+    },
+    {
+      "id": "8765",
+      "name": "Bob Smith",
+      "password": "Bob@789",
+      "email": "bob.smith@example.com",
+      "department": "Finance"
+    },
+    {
+      "id": "4567",
+      "name": "Mia Rodriguez",
+      "password": "Mia@456",
+      "email": "mia.r@example.com",
+      "department": "Sales"
+    },
+    {
+      "id": "3344",
+      "name": "Ashit Palai",
+      "password": "Ashit@1206",
+      "email": "ryan.p@example.com",
+      "department": "Engineering"
+    },
+    {
+      "id": "0987765544",
+      "name": "hh",
+      "password": "edbdbqudbwqudbwqdoqwbdoqw",
+      "email": "ff@gmail.com",
+      "department": "eqdeqio"
+    },
+    {
+      "id": "1212",
+      "name": "1212",
+      "password": "1212",
+      "email": "1212",
+      "department": "1212"
+    }
+  ],
+  "admin": [
+    {
+      "name": "Xnet",
+      "description": "to do list",
+      "deadline": "2024-01-26",
+      "department": "dept2",
+      "manager": "sdm",
+      "teams": "s",
+      "id": "5dae"
+    },
+    {
+      "name": "Model XS",
+      "description": "task management",
+      "deadline": "2024-02-15",
+      "department": "IT",
+      "manager": "Jane Smith",
+      "teams": "ReactJS,NodeJS",
+      "id": "6abc"
+    },
+    {
+      "name": "Lead management",
+      "description": "project planning",
+      "deadline": "2024-03-05",
+      "department": "Digital",
+      "manager": "Alex Johnson",
+      "teams": "AngularJS,ExpressJS",
+      "id": "7def"
+    },
+    {
+      "name": "RBI",
+      "description": "task tracking",
+      "deadline": "2024-04-20",
+      "department": "Tech",
+      "manager": "Sophie Davis",
+      "teams": "VueJS,Java",
+      "id": "8ghi"
+    },
+    {
+      "name": "BMW",
+      "description": "feature development",
+      "deadline": "2024-05-10",
+      "department": "Development",
+      "manager": "Chris Evans",
+      "teams": "ReactJS,Python",
+      "id": "9jkl"
+    },
+    {
+      "name": "Uidai",
+      "description": "bug fixing",
+      "deadline": "2024-06-01",
+      "department": "QA",
+      "manager": "Ava Thompson",
+      "teams": "JavaScript,C#",
+      "id": "10mno"
+    }
+  ],
+  "transactions": [
+    {
+      "id": "a499",
+      "date": "2024-01-18",
+      "category": "Food",
+      "amount": 1200
+    }
+  ]
+}

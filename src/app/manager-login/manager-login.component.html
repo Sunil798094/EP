@@ -1,0 +1,32 @@
+<p>manager-login works!</p>
+<body>
+    <div class="box">
+      <div class="container">
+        <div class="row">
+          <div class="rowr">
+            <h2> Manager Login</h2>
+            <form [formGroup]="loginForm" (ngSubmit)="login()">
+              <div class="form-group">
+                <label for="youremailaddress">Email address</label>
+                <input type="email" class="form-control" id="youremailaddress" formControlName="youremailaddress"
+                  placeholder="Enter your email">
+                <div *ngIf="loginForm.get('youremailaddress').invalid && loginForm.get('youremailaddress').touched">
+                  <small class="text-danger">Invalid email address</small>
+                </div>
+              </div><br>
+              <div class="form-group">
+                <label for="yourpassword">Password</label>
+                <input type="password" class="form-control" id="yourpassword" formControlName="yourpassword"
+                  placeholder="Enter your password">
+                <div *ngIf="loginForm.get('yourpassword').hasError('required') && loginForm.get('yourpassword').touched">
+                  <small class="text-danger">Password is required</small>
+                </div>
+              </div><br>
+              <button type="submit" [disabled]="!loginForm.valid" class="btn btn-primary">Login</button>
+            </form>
+            <a style="margin-top: 10px;" routerLink="/register">New user? Click here to signup.</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>

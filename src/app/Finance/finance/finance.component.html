@@ -1,0 +1,38 @@
+<body>
+  <div class="container">
+    <h2>Finance and Accounting</h2>
+  
+    <form [formGroup]="transactionForm" (ngSubmit)="addTransaction()">
+      <label>Date: <input type="date" formControlName="date" /></label>
+      <label>Category: <input type="text" formControlName="category" /></label>
+      <label>Amount: <input type="number" formControlName="amount" /></label>
+      <button type="submit" [disabled]="transactionForm.invalid">Add Transaction</button>
+    </form>
+  
+    <h3>Transactions</h3>
+    <ul *ngFor="let transaction of transactions">
+      <li>
+        {{ transaction.date | date }} - {{ transaction.category }} - {{ transaction.amount | currency }}
+        <button (click)="deleteTransaction(transaction.id)">Delete</button>
+        <!-- *ngIf="isEditable(transaction.date)" -->
+      </li>
+    </ul>
+  </div>
+
+
+  <div class="container-fluid">
+    <h2>Financial Report</h2>
+    <label>Date Range: 
+      <input type="date" formControlName="reportStartDate" />
+      <input type="date" formControlName="reportEndDate" />
+    </label>
+    <button (click)="generateReport()">Generate Report</button>
+    <div *ngIf="report">
+      <p>Income: {{ report.income | currency }}</p>
+      <p>Expenses: {{ report.expenses | currency }}</p>
+      <p>Net Balance: {{ report.netBalance | currency }}</p>
+    </div>
+  </div>
+</body>
+  
+  

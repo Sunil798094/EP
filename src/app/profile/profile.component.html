@@ -1,0 +1,14 @@
+<body>
+    <div class="user-profiles">
+        <div class="userpro">
+            <h2>User Profiles</h2>
+        </div>
+        <div class="user-card" *ngFor="let user of users">
+            <p>User Id:{{user.id}}</p>
+            <p>Name:{{user.name}}</p>
+            <p>Email:{{user.email}}</p>
+            <p>Department:{{user.department}}</p>
+            <hr>
+        </div>
+    </div>
+</body>

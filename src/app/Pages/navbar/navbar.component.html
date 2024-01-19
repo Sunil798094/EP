@@ -1,0 +1,44 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a routerLink="/about"><img src="assets/ERP.jpg"></a>
+ 
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+    aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" routerLink="/home">Home</a>
+      </li>
+
+      <li class="nav-item active">
+        <a class="nav-link" routerLink="/about">About</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/contact">Contact</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/profile">Profiles</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/manager-list">Managers</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/finance">Finance</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/projects">Projects</a>
+      </li>
+
+    </ul>
+
+    <div class="my-2 my-lg-0">
+      <div class="d-flex">
+        <button routerLink="/login" class="btn btn-primary mr-2">Login</button>&nbsp;
+        <button routerLink="/register" class="btn btn-success">Register</button>
+        <button (click)="logout()" class="btn btn-danger mx-2">Logout</button>
+      </div>
+    </div>
+  </div>
+</nav>

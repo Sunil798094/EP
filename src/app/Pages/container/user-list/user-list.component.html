@@ -1,0 +1,162 @@
+<div>
+
+    <div class="container mt-3">
+        <div class="text-right">
+            <button type="button" class="btn btn-primary" (click)="jobForm()">{{ isCreating ? 'Back':'Create User'
+                }}</button>
+        </div>
+    </div>
+
+
+    <div class="container mt-4" *ngIf="isCreating">
+        <div class="row">
+            <div class="col-md-6 offset-md-3">
+                <h2 class="text-center mb-4">User Creation</h2>
+                <form [formGroup]="userForm" (ngSubmit)="onFormSubmit()">
+                    <div class="form-group">
+                        <label for="name">Name*</label>
+                        <input type="text" formControlName="name" id="name" class="form-control">
+                        <small *ngIf="userForm.get('name').invalid && userForm.get('name').touched" class="text-danger">
+                            Please enter Name
+                        </small>
+                    </div>
+
+                    <div class="form-group">
+
+                        <label for="id">UserId*</label>
+                        <input type="text" formControlName="id" id="id" class="form-control">
+                        <small *ngIf="userForm.get('id').invalid && userForm.get('id').touched" class="text-danger">
+                            Please enter User ID
+                        </small>
+
+                    </div>
+
+                    <div class="form-group">
+
+                        <label for="email">Email*</label>
+                        <input type="text" formControlName="email" id="email" class="form-control">
+                        <small *ngIf="userForm.get('email').invalid && userForm.get('email').touched"
+                            class="text-danger">
+                            Please enter Email
+                        </small>
+
+                    </div>
+
+                    <div class="form-group">
+
+                        <label for="password">Password*</label>
+                        <input type="password" formControlName="password" id="password" class="form-control">
+                        <small *ngIf="userForm.get('password').invalid && userForm.get('password').touched"
+                            class="text-danger">
+                            Please enter Password
+                        </small>
+
+                    </div>
+
+                    <div class="form-group">
+
+                        <label for="department">Department*</label>
+                        <input type="text" formControlName="department" id="department" class="form-control">
+                        <small *ngIf="userForm.get('department').invalid && userForm.get('department').touched"
+                            class="text-danger">
+                            Please enter Department
+                        </small>
+
+                    </div>
+                    <br>
+
+                    <div class="text-center" (click)="onEmptySubmit()">
+                        <button type="submit" [disabled]="userForm.invalid" class="btn"
+                            [ngClass]="{'btn-primary': isEditMode, 'btn-success': !isEditMode}">
+                            {{isEditMode? "Update" : "Submit"}}
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- <div class="container mt-4">
+        <div *ngIf="!isCreating">
+            <div *ngFor="let user of users" class="card mb-3">
+                <div class="card-body">
+                    <h4 class="card-title">User ID: {{user.id}}</h4>
+                    <p class="card-text">Name: {{user.name}}</p>
+                    <p class="card-text">Department: {{user.department}}</p>
+    
+                    <button (click)="editUser(user.id)" class="btn btn-primary mr-2">Edit</button>&nbsp;
+                    <button (click)="deleteUser(user.id)" class="btn btn-danger">Delete</button>
+                </div>
+            </div>
+        </div>
+    </div> -->
+
+    <div *ngIf="!isCreating">
+
+        <div class="d-flex justify-content-center align-items-center mt-3">
+            <mat-form-field class="w-50">
+                <input matInput (keyup)="applyFilter($event)" placeholder="Search" class="w-100">
+            </mat-form-field>
+        </div>
+
+        <div class="p-5"> <!-- Add padding to the entire container -->
+            <table mat-table [dataSource]="dataSource" class="mat-elevation-z8 table">
+
+
+                <!-- userid -->
+                <ng-container matColumnDef="userid">
+                    <th mat-header-cell *matHeaderCellDef> User ID </th>
+                    <td mat-cell *matCellDef="let element"> {{element.id}} </td>
+                </ng-container>
+
+                <!-- Name Column -->
+                <ng-container matColumnDef="name">
+                    <th mat-header-cell *matHeaderCellDef> Name </th>
+                    <td mat-cell *matCellDef="let element"> {{element.name}} </td>
+                </ng-container>
+
+
+                <!-- Department Column -->
+                <ng-container matColumnDef="department">
+                    <th mat-header-cell *matHeaderCellDef> Department</th>
+                    <td mat-cell *matCellDef="let element"> {{element.department}} </td>
+                </ng-container>
+
+                <!-- Email Column -->
+                <ng-container matColumnDef="email">
+                    <th mat-header-cell *matHeaderCellDef> Email</th>
+                    <td mat-cell *matCellDef="let element"> {{element.email}} </td>
+                </ng-container>
+
+                <!-- Action Buttons Column -->
+                <ng-container matColumnDef="actions">
+                    <th mat-header-cell *matHeaderCellDef> Actions </th>
+                    <td mat-cell *matCellDef="let user">
+                        <div>
+                            <button mat-icon-button (click)="editUser(user.id)" matTooltip="Edit" class="mat-primary">
+                                <mat-icon mat-fab color="primary"
+                                    aria-label="Example icon button with a delete icon">edit</mat-icon>
+                            </button> &nbsp;
+                            <button mat-icon-button (click)="deleteUser(user.id)" matTooltip="Delete" class="mat-warn">
+                                <mat-icon mat-fab color="primary"
+                                    aria-label="Example icon button with a delete icon">delete</mat-icon>
+                            </button>
+                            <button mat-icon-button [routerLink]="'/user-detail/' + user.id" matTooltip="More Actions"
+                                class="mat-warn">
+                                <mat-icon mat-fab color="primary" aria-label="More icon button">more_vert</mat-icon>
+
+                            </button>
+
+                        </div>
+                    </td>
+                </ng-container>
+
+                <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+                <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+            </table>
+        </div>
+    </div>
+
+
+
+</div>

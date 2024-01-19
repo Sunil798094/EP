@@ -1,0 +1,179 @@
+<div>
+    <div class="container mt-3">
+        <div class="text-right">
+            <button type="button" class="btn btn-primary" (click)="PProjectForm()">
+                {{ isCreating ? 'Back':'CreateProject'}}
+            </button>
+        </div>
+    </div>
+ 
+ 
+    <div class="container mt-4" *ngIf="isCreating">
+        <div class="row">
+            <div class="col-md-6 offset-md-3">
+                <div class="card">
+                    <div class="card-header">
+                        <h2 class="text-center mb-4">{{ isEditMode ? 'Edit Project' : 'Create Project' }}</h2>
+                    </div>
+                    <div class="card-body">
+                        <form [formGroup]="projectForm" (ngSubmit)="onFormSubmit()">
+                            <div class="form-group">
+                                <label for="name">Project Title<span class="text-danger">*</span></label>
+                                <input type="text" formControlName="name" id="name" class="form-control"
+                                    placeholder="Ttitle of the project">
+                                <div *ngIf="projectForm.get('name').invalid && projectForm.get('name').touched"
+                                    class="text-danger">
+                                    Project Title is required.
+                                </div>
+ 
+ 
+                                <label for="description">Description<span class="text-danger">*</span></label>
+                                <textarea formControlName="description" id="description" class="form-control"
+                                    placeholder="Description of the project"></textarea>
+                                <div *ngIf="projectForm.get('description').invalid && projectForm.get('description').touched"
+                                    class="text-danger">
+                                    Description is required.
+                                </div>
+ 
+                                <label for="deadline">Deadline<span class="text-danger">*</span></label>
+                                <input type="date" formControlName="deadline" id="deadline" class="form-control"
+                                    placeholder="Deadline">
+                                <div *ngIf="projectForm.get('deadline').invalid && projectForm.get('deadline').touched"
+                                    class="text-danger">
+                                    Deadline is required.
+                                </div>
+ 
+                                <label for="department">Department<span class="text-danger">*</span></label>
+                                <!-- Use a dropdown for department -->
+                                <select formControlName="department" id="department" class="form-control">
+                                    <option value="" disabled selected>Select Department</option>
+                                    <option value="dept1">Management</option>
+                                    <option value="dept2">Angular</option>
+                                    <option value="dept2">Node</option>
+                                    <!-- Add more options as needed -->
+                                </select>
+                                <div *ngIf="projectForm.get('department').invalid && projectForm.get('department').touched"
+                                    class="text-danger">
+                                    Department is required.
+                                </div>
+                                <label for="manager">Manager<span class="text-danger">*</span></label>
+                                <input type="text" formControlName="manager" id="manager" class="form-control"
+                                    placeholder="Manager Name">
+                                <div *ngIf="projectForm.get('manager').invalid && projectForm.get('manager').touched"
+                                    class="text-danger">
+                                    Manager name is required.
+                                </div>
+                                <label for="teams">Teams<span class="text-danger">*</span></label>
+                                <!-- Use a textarea for team members -->
+                                <textarea formControlName="teams" id="teams" class="form-control"
+                                    placeholder="Add team members"></textarea>
+                                <div *ngIf="projectForm.get('teams').invalid && projectForm.get('teams').touched"
+                                    class="text-danger">
+                                    Teams are required.
+                                </div>
+                            </div><br>
+                            <div class="text-center">
+                                <button type="submit" [disabled]="projectForm.invalid" class="btn btn-block"
+                                    [ngClass]="{'btn-primary': isEditMode, 'btn-success': !isEditMode}">
+                                    {{ isEditMode ? 'Update' : 'Post' }}
+                                </button>
+                            </div>
+ 
+                        </form>
+                    </div>
+                </div>
+            </div>
+ 
+ 
+ 
+ 
+        </div>
+    </div>
+ 
+    <!-- <div *ngIf="!isCreating">
+        <div *ngFor="let pro of projects">
+        <p>{{pro.id}}</p>
+           
+        </div>
+ 
+    </div> -->
+ 
+ 
+ 
+    <div *ngIf="!isCreating">
+ 
+        <div class="d-flex justify-content-center align-items-center mt-3">
+            <mat-form-field class="w-50">
+                <input matInput (keyup)="applyFilter($event)" placeholder="Search" class="w-100">
+            </mat-form-field>
+        </div>
+ 
+        <div class="p-5"> <!-- Add padding to the entire container -->
+            <table mat-table [dataSource]="dataSource" class="mat-elevation-z8 table">
+ 
+ 
+                <!-- projectid -->
+                <ng-container matColumnDef="projectid">
+                    <th mat-header-cell *matHeaderCellDef> Project ID </th>
+                    <td mat-cell *matCellDef="let element"> {{element.id}} </td>
+                </ng-container>
+ 
+                <!-- Name Column -->
+                <ng-container matColumnDef="name">
+                    <th mat-header-cell *matHeaderCellDef> Name </th>
+                    <td mat-cell *matCellDef="let element"> {{element.name}} </td>
+                </ng-container>
+ 
+                <!-- Deadline Column -->
+                <ng-container matColumnDef="deadline">
+                    <th mat-header-cell *matHeaderCellDef> Deadline </th>
+                    <td mat-cell *matCellDef="let element"> {{element.deadline}} </td>
+                </ng-container>
+ 
+                <!-- Deadline Column -->
+                <ng-container matColumnDef="manager">
+                    <th mat-header-cell *matHeaderCellDef> Manager </th>
+                    <td mat-cell *matCellDef="let element"> {{element.manager}} </td>
+                </ng-container>
+ 
+ 
+ 
+ 
+                <!-- Department Column -->
+                <ng-container matColumnDef="department">
+                    <th mat-header-cell *matHeaderCellDef> Department</th>
+                    <td mat-cell *matCellDef="let element"> {{element.department}} </td>
+                </ng-container>
+ 
+                <!-- Email Column -->
+                <ng-container matColumnDef="email">
+                    <th mat-header-cell *matHeaderCellDef> Email</th>
+                    <td mat-cell *matCellDef="let element"> {{element.email}} </td>
+                </ng-container>
+ 
+                <!-- Action Buttons Column -->
+                <ng-container matColumnDef="actions">
+                    <th mat-header-cell *matHeaderCellDef> Actions </th>
+                    <td mat-cell *matCellDef="let project">
+                        <div>
+                            <button mat-icon-button (click)="editProject(project.id)" matTooltip="Edit"
+                                class="mat-primary">
+                                <mat-icon mat-fab color="primary"
+                                    aria-label="Example icon button with a delete icon">edit</mat-icon>
+                            </button> &nbsp;
+                            <button mat-icon-button (click)="deleteProject(project.id)" matTooltip="Delete"
+                                class="mat-warn">
+                                <mat-icon mat-fab color="primary"
+                                    aria-label="Example icon button with a delete icon">delete</mat-icon>
+                            </button>
+                        </div>
+                    </td>
+                </ng-container>
+ 
+                <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+                <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+            </table>
+        </div>
+    </div>
+ 
+</div>

@@ -1,0 +1,57 @@
+.user-profiles {
+    max-width: 800px;
+    margin: 20px auto;
+  }
+  
+  .user-profiles h2 {
+    color: #333;
+    text-align: center;
+  }
+  
+  .user-profiles div {
+    background-color: #f9f9f9;
+    padding: 15px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+  }
+  
+  .user-profiles h3 {
+    color: #1e90ff;
+    margin-bottom: 8px;
+  }
+  
+  .user-profiles p {
+    margin: 8px 0;
+    color: #555;
+  }
+  
+  .user-profiles hr {
+    border: 1px solid #ddd;
+  }
+  .userpro{
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #cf6969;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  .user-card{
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f78383;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  body {
+    margin: 0;
+    padding: 0;
+    background-image: url('https://img.freepik.com/free-photo/abstract-textured-backgound_1258-30495.jpg?size=338&ext=jpg&ga=GA1.1.632798143.1705449600&semt=ais'); /* Adjust the path accordingly */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }

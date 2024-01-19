@@ -1,0 +1,91 @@
+/* button {
+    padding: 4px 15px;
+    border-radius: 5px !important;
+    margin: 5px 0px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    font-size: 18px !important;
+    font-weight: 300
+} */
+.container {
+  margin-top: 5rem;
+  width: 100%;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  margin-left: 7%;
+}
+  h1{
+    color: black;
+  }
+  
+  .card {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+  }
+  
+  .card-header {
+    background-color: #f8eff5;
+    color: #fff;
+    padding: 20px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+  }
+  
+  /* .card-header h1 {
+    margin-bottom: 10px;
+  } */
+  
+  .card-header button {
+    margin-right: 10px;
+  }
+  
+  .card-body {
+    padding: 20px;
+  }
+  
+  .card-body p {
+    font-size: 1.1rem;
+  }
+  
+  .card-body hr {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
+  
+  .img-fluid {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+
+  body {
+    margin: 0;
+    padding: 0;
+    background-image: url('https://thumbs.dreamstime.com/z/enterprise-resource-planning-erp-corporate-company-management-business-internet-technology-concept-101526774.jpg'); /* Adjust the path accordingly */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+  footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: #343a40;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+  }
+  body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+  }
+
+  @media (max-width: 768px) {
+    .card-body {
+      padding: 20px 10px;
+    }
+  }
+  

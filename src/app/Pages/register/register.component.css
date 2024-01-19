@@ -1,0 +1,104 @@
+.card{
+  /* margin-top: 40px; */
+  border: none;
+  width: 500px;
+  /* height: auto; */
+  padding: 40px;
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  /* background: rgb(96, 154, 194); */
+  /* background: linear-gradient(90deg, rgb(169, 182, 241) 0%, hsla(260, 29%, 14%, 1)100%); */
+}
+
+.card h1,h6{
+  color: black;
+}
+
+label{
+  color: black;
+}
+input.ng-invalid.ng-touched{
+  border: red 1px solid;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-image: url('https://img.freepik.com/premium-vector/geometric-gradient-technology-background_23-2149110132.jpg?size=626&ext=jpg&ga=GA1.1.632798143.1705449600&semt=ais'); /* Adjust the path accordingly */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+
+body {
+  background-color: #f8f9fa; /* Set a light background color for the body */
+}
+
+.container {
+  height: 100vh; /* Make the container full viewport height */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card {
+  background-color: #fff; /* White background for the card */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  padding: 20px;
+  width: 100%;
+  max-width: 500px; /* Set a maximum width for the card */
+}
+
+.text-center {
+  text-align: center;
+}
+
+h1, h4 {
+  margin-bottom: 20px;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+input,
+select {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ced4da; /* Light border color */
+  border-radius: 4px;
+  margin-bottom: 10px;
+}
+
+button {
+  background-color: #007bff; /* Primary button color */
+  color: #fff; /* Text color */
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease; /* Smooth transition on hover */
+}
+
+button:disabled {
+  background-color: #4bc2f1; /* Disabled button color */
+  cursor: not-allowed;
+}
+
+a {
+  color: #000; /* Link color */
+}
+
+a:hover {
+  text-decoration: underline;
+}

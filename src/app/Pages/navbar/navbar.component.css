@@ -1,0 +1,27 @@
+.btn-primary {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+}
+img {
+    width: 100px; 
+    height: auto;
+    display: block; 
+    margin: 0 auto; 
+  }
+  .d-flex {
+    display: flex;
+    justify-content: flex-end;
+    margin-left: 490px;
+  }
+  
+
+
+
